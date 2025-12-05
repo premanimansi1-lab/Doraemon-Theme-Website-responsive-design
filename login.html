@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Poppins, Verdana, sans-serif;
+        }
+
+        .navbar{
+            display:flex;
+            align-items:center;
+            padding:20px;
+            background:black;
+            color:white;
+            box-shadow:0 4px 25px rgba(0,0,0,0.4);
+        }
+        .navbar h2{ font-size:32px; }
+
+        ul{
+            margin-left:auto;
+            display:flex;
+            gap:20px;
+            list-style:none;
+            align-items:center;
+        }
+
+        ul li a{
+            color:cadetblue;
+            font-size:20px;
+            text-decoration:none;
+        }
+
+        .btn{
+            padding:8px 18px;
+            border:2px solid cadetblue;
+            border-radius:5px;
+            font-size:18px;
+            color:cadetblue;
+        }
+        .btn:hover{
+            background:cadetblue;
+            color:black;
+        }
+
+        section{
+            min-height:100vh;
+            padding:40px;
+            position:relative;
+        }
+        section::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:url('../images/bgimg.jpg');
+            background-size:cover;
+            opacity:0.2;
+            z-index:-1;
+        }
+
+        h1{
+            text-align:center;
+            font-size:50px;
+            color:#1446d3;
+            margin-bottom:30px;
+        }
+
+        .login-box{
+            max-width:500px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            background:rgba(255,255,255,0.85);
+            box-shadow:0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        label{
+            color:#0a2bb8;
+            font-weight:bold;
+            font-size:18px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0 20px;
+            border:2px solid #2a60d4;
+            border-radius:8px;
+            font-size:16px;
+            outline:none;
+        }
+
+        input:focus{
+            box-shadow:0 0 10px rgba(43, 89, 234, 0.4);
+        }
+
+        .submit-btn{
+            width:100%;
+            padding:12px;
+            border:none;
+            background:#2a60d4;
+            color:white;
+            font-size:20px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+        .submit-btn:hover{
+            background:#0a2bb8;
+        }
+
+        .signup-link{
+            text-align:center;
+            margin-top:15px;
+            font-size:17px;
+        }
+        .signup-link a{
+            color:#0a2bb8;
+            text-decoration:none;
+        }
+
+        @media(max-width:900px){
+            .navbar{
+                flex-direction:column;
+                gap:15px;
+            }
+            ul{
+                flex-direction:column;
+                width:100%;
+            }
+            ul li a{
+                padding:12px 0;
+                width:100%;
+                display:block;
+            }
+        }
+
+        @media(max-width:500px){
+            h1{ font-size:38px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h2>MyLogo</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="btn">Login</a></li>
+            <li><a href="registration.html" class="btn">Signup</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <h1>Login</h1>
+
+        <div class="login-box">
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <button class="submit-btn">Login</button>
+
+            <p class="signup-link">
+                Don’t have an account? <a href="registration.html">Register</a>
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

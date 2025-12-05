@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        .navbar{
+            display:flex;
+            align-items:center;
+            padding:20px;
+            background-color:black;
+            color:white;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+        }
+
+        .navbar h2{
+            font-size:32px;
+        }
+
+        ul{
+            margin-left:auto;
+            display:flex;
+            gap:20px;
+            list-style:none;
+            align-items:center;
+        }
+
+        ul li a{
+            text-decoration:none;
+            color:cadetblue;
+            font-size:20px;
+            padding:5px 10px;
+        }
+
+        /* Buttons inside navbar */
+        .btn{
+            padding:8px 18px;
+            border:2px solid cadetblue;
+            border-radius:5px;
+            font-size:18px;
+            color:cadetblue;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background-color:cadetblue;
+            color:black;
+        }
+
+
+        /* content css */
+
+        .container{
+            max-width:1200px;
+            margin:40px auto;
+            padding:0 20px;
+            
+        }
+        .card
+        {
+            width:calc(33.33% - 20px);
+            min-height:420px;
+            background-color: white;
+            border:1px solid #ccc;
+            box-shadow: 0 4px 20px rgba(3, 3, 3, 0.2);
+            border-radius: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .cards{
+            display:flex;
+            gap:20px;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+
+        .card img{
+            width:100%;
+            height: 58%;
+            border-radius:10px 10px 0px 0px;
+            /* padding:-100px; */
+        }
+        .content{
+            padding:15px;
+        }
+        
+
+        /* ======================
+                RESPONSIVE
+        ====================== */
+
+        @media(max-width:900px){
+
+            .navbar{
+                flex-direction:column;
+                text-align:center;
+                gap:15px;
+                font-size: 13px;
+            }
+
+            ul{
+                flex-direction:column;
+                gap:12px;
+                width:100%;
+            }
+
+            ul li{
+                width:100%;
+            }
+
+            ul li a{
+                display:block;
+                width:100%;
+                padding:12px 0;
+                font-size:18px;
+            }
+
+            .btn{
+                width:100%;
+                display:block;
+            }
+
+            /* cards css */
+            .card{
+                width:45%;
+                margin-bottom:20px;
+            }
+        }
+
+        @media(max-width:600px){
+
+            .card{
+                width:100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>MyLogo</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="login.html" class="btn">Login</a></li>
+            <li><a href="registration.html" class="btn">Signup</a></li>
+        </ul>
+    </div>
+
+    <!-- cards content start-->
+     <section>
+
+     
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <img src="../images/eight.jpeg" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../images/four.png" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../images/nine.jpg" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../images/one.png" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../images/seven.jpeg" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../images/six.jpg" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../images/ten.jpeg" alt="" height="">
+                    <div class="content">
+                        <h3>Card Title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- cards content end -->
+</section>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .navbar{
+            display:flex;
+            align-items:center;
+            padding:20px;
+            background-color:black;
+            color:white;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+        }
+
+        .navbar h2{
+            font-size:32px;
+        }
+
+        ul{
+            margin-left:auto;
+            display:flex;
+            gap:20px;
+            list-style:none;
+            align-items:center;
+        }
+
+        ul li a{
+            text-decoration:none;
+            color:cadetblue;
+            font-size:20px;
+            padding:5px 10px;
+        }
+
+        .btn{
+            padding:8px 18px;
+            border:2px solid cadetblue;
+            border-radius:5px;
+            font-size:18px;
+            color:cadetblue;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background-color:cadetblue;
+            color:black;
+        }
+
+        /* Section */
+        section{
+            position: relative;
+            min-height: 100vh;
+            padding: 40px;
+            z-index: 1;
+        }
+
+        section::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/bgimg.jpg');
+            background-size:cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        section h1{
+            font-size: 52px;
+            color: #1609cc;
+            text-align:center;
+            margin-bottom: 40px;
+        }
+
+        .contact-box{
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+
+        .contact-box label{
+            font-size: 18px;
+            font-weight: bold;
+            color:#0a2bb8;
+        }
+
+        .contact-box input,
+        .contact-box textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0 20px;
+            border:2px solid #2a60d4;
+            border-radius:8px;
+            font-size:16px;
+            outline:none;
+        }
+
+        .contact-box textarea{
+            height:150px;
+            resize:none;
+        }
+
+        .submit-btn{
+            width:100%;
+            padding:12px;
+            font-size:20px;
+            border:none;
+            border-radius:8px;
+            background-color:#2a60d4;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .submit-btn:hover{
+            background-color:#0a2bb8;
+        }
+
+
+        /* responsive */
+        @media(max-width:900px){
+            .navbar{
+                flex-direction:column;
+                text-align:center;
+                gap:15px;
+            }
+
+            ul{
+                flex-direction:column;
+                gap:12px;
+                width:100%;
+            }
+
+            ul li{
+                width:100%;
+            }
+
+            ul li a{
+                display:block;
+                width:100%;
+                padding:12px 0;
+                font-size:18px;
+            }
+
+            .btn{
+                width:100%;
+                display:block;
+            }
+        }
+
+        @media(max-width:500px){
+            section h1{
+                font-size: 38px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>MyLogo</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="login.html" class="btn">Login</a></li>
+            <li><a href="registration.html" class="btn">Signup</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <h1>Contact Us</h1>
+
+        <div class="contact-box">
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Your Message</label>
+            <textarea placeholder="Write your message here..."></textarea>
+
+            <button class="submit-btn">Send Message</button>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        .navbar{
+            display:flex;
+            align-items:center;
+            padding:20px;
+            background-color:black;
+            color:white;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+        }
+
+        .navbar h2{
+            font-size:32px;
+        }
+
+        ul{
+            margin-left:auto;
+            display:flex;
+            gap:20px;
+            list-style:none;
+            align-items:center;
+        }
+
+        ul li a{
+            text-decoration:none;
+            color:cadetblue;
+            font-size:20px;
+            padding:5px 10px;
+        }
+
+        /* Buttons inside navbar */
+        .btn{
+            padding:8px 18px;
+            border:2px solid cadetblue;
+            border-radius:5px;
+            font-size:18px;
+            color:cadetblue;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background-color:cadetblue;
+            color:black;
+        }
+
+        /* section page */
+        section{
+            position: relative;
+            min-height: 100vh;
+            padding: 40px;
+            z-index: 1;
+        }
+
+        section::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/bgimg.jpg');
+            background-size:cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        section h1{
+            font-size: 58px;
+            color: #1609cc;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container .content{
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .container .content img{
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(3, 3, 3, 0.2);
+        }
+        .container .content p{
+            font-size: 20px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            text-align: justify;
+        }
+
+       
+
+
+        
+
+        /* ======================
+                RESPONSIVE
+        ====================== */
+
+        @media(max-width:900px){
+
+            .navbar{
+                flex-direction:column;
+                text-align:center;
+                gap:15px;
+                font-size: 13px;
+            }
+
+            ul{
+                flex-direction:column;
+                gap:12px;
+                width:100%;
+            }
+
+            ul li{
+                width:100%;
+            }
+
+            ul li a{
+                display:block;
+                width:100%;
+                padding:12px 0;
+                font-size:18px;
+            }
+
+            .btn{
+                width:100%;
+                display:block;
+            }
+
+            /* content css */
+            .container .content{
+                flex-direction: column;
+                text-align: center;
+            }
+            .container .content p{
+                max-width: 100%;
+            }
+            img{
+                width: 80%;
+                height: auto;
+            }
+
+            
+        }
+        @media(max-width:600px){
+
+            .container .content p{
+                font-size: 18px;
+            }
+            img
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media(max-width:500px){
+            section h1{
+                font-size: 36px;
+            }
+        }
+
+        @media(max-width:400px){
+
+            section h1{
+                font-size: 40px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>MyLogo</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="login.html" class="btn">Login</a></li>
+            <li><a href="registration.html" class="btn">Signup</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="container">
+            <h1>Welcome to Doraemon World!!!</h1>
+            <div class="content">
+                <img src="../images/bgimg.jpg" alt="" height="350px" width="400px">
+                
+                <p>Welcome to our Doraemon world! We created this website to celebrate the magic, fun, and imagination that Doraemon brings to everyone. Doraemon is more than just a robot cat—he is a true friend who teaches kindness, creativity, and hope. Through his gadgets and adventures with Nobita, he shows us that anything is possible. Our goal is to share stories, moments, and inspiration from the Doraemon universe. Whether you grew up watching him or just discovered him, this place is for all Doraemon lovers. Let's explore this joyful world together!</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
